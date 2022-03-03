@@ -1,0 +1,224 @@
+###
+GET http://localhost:8080/student
+
+###
+POST http://localhost:8080/student
+Content-Type: application/json
+
+{
+  "firstName": "Abror",
+  "lastName": "Safarov",
+  "phoneNumber": "+998971234576"
+}
+
+###
+GET http://localhost:8080/student/1
+
+###
+DELETE http://localhost:8080/student/2
+
+PUT http://localhost:8080/student/4
+Content-Type: application/json
+
+{
+  "firstName": "Abror",
+  "lastName": "Abrorov",
+  "phoneNumber": "+998971234576"
+}
+
+###
+GET http://localhost:8080/university
+
+###
+POST http://localhost:8080/university
+Content-Type: application/json
+
+{
+  "name": "Texnika university",
+  "city": "Tashkent",
+  "district": "Olmazor",
+  "street": "Talabalar"
+}
+###
+PUT http://localhost:8080/university/2
+Content-Type: application/json
+
+{
+  "name": "Politexnika university",
+  "city": "Tashkent",
+  "district": "Shayhontohur",
+  "street": "Bobur"
+}
+
+###
+DELETE http://localhost:8080/university/3
+
+###
+POST http://localhost:8080/subject
+Content-Type: application/json
+
+{
+  "name": "English"
+}
+
+###
+GET http://localhost:8080/subject
+
+###
+PUT http://localhost:8080/subject/3
+Content-Type: application/json
+
+{
+  "name": "Russian"
+}
+
+###
+DELETE http://localhost:8080/subject/3
+
+###
+POST http://localhost:8080/faculty
+Content-Type: application/json
+
+{"name": "English",
+"universityId": 1}
+
+###
+GET http://localhost:8080/faculty/byUniversityId/2
+
+###
+GET http://localhost:8080/faculty
+
+###
+POST http://localhost:8080/group
+Content-Type: application/json
+
+{
+"name": "G10",
+  "facultyId": 3
+}
+###
+GET http://localhost:8080/group
+
+###
+GET http://localhost:8080/group/byUniversityId/1
+
+###
+GET http://localhost:8080/faculty
+
+###
+POST http://localhost:8080/faculty
+Content-Type: application/json
+
+{"name": "Math",
+"universityId": 2}
+###
+PUT http://localhost:8080/faculty/5
+Content-Type: application/json
+
+{"name": "Information Technology",
+  "universityId": 2}
+###
+DELETE http://localhost:8080/faculty/9
+
+###
+POST http://localhost:8080/group
+Content-Type: application/json
+
+{
+"name": "G10",
+  "facultyId": 3
+}
+
+###
+GET http://localhost:8080/group
+
+###
+GET http://localhost:8080/group/byUniversityId/1
+###
+PUT http://localhost:8080/group/4
+Content-Type: application/json
+
+{
+  "name": "G144",
+  "facultyId": 3
+}
+###
+DELETE http://localhost:8080/group/3
+###
+GET http://localhost:8080/address
+###
+GET http://localhost:8080/address/5
+
+###
+POST http://localhost:8080/address
+Content-Type: application/json
+
+{
+  "city": "Tashkent",
+  "district": "Yakkasaroy",
+  "street": "Bobur"
+}
+
+###
+PUT http://localhost:8080/address/1
+Content-Type: application/json
+
+{
+  "city": "Tashkent",
+  "district": "Yashnobod",
+  "street": "Jarqo'rg'on"
+}
+###
+DELETE http://localhost:8080/address/3
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+###
+GET http://localhost:8080/student/forMinistry?page=0&size=10
+
+###
+GET http://localhost:8080/student/forUniversity/1?page=0&size=1
+
+###
+GET http://localhost:8080/student/forDepartment/1?page=0&size=1
+
+###
+GET http://localhost:8080/student/forGroupOwner/2?page=0&size=1
+
+###
+POST http://localhost:8080/student
+Content-Type: application/json
+
+{
+  "firstName": "Karim",
+  "lastName": "ALIMov",
+  "city": "Tashkent",
+  "district": "Uchtepa",
+  "street": "BERUNIY",
+  "groupId": 1
+}
+
+###
+GET http://localhost:8080/student/1
+
+###
+GET http://localhost:8080/student
+
+###
+PUT http://localhost:8080/student/3
+Content-Type: application/json
+
+{
+  "firstName": "AAAAAAAAA",
+  "lastName": "SSSSSSSSSS",
+  "city": "DDDDDDDDDDDD",
+  "district": "XXXXXXXXXXX",
+  "street": "NNNNNN",
+  "groupId": 1
+}
+
+###
+DELETE http://localhost:8080/student/1
+
+
+
